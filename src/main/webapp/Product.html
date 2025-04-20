@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Product</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        td {
+            padding: 12px;
+        }
+        
+        td:first-child {
+            font-weight: 500;
+            color: #495057;
+            width: 40%;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        
+        input[type="text"]:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+        
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Add New Product</h1>
+        <form action="add" method="post">
+            <table>
+                <tr>
+                    <td>Product Code</td>
+                    <td><input type="text" name="pcode" required></td>
+                </tr>
+                <tr>
+                    <td>Product Name</td>
+                    <td><input type="text" name="pname" required></td>
+                </tr>
+                <tr>
+                    <td>Product Price</td>
+                    <td><input type="text" name="pprice" required></td>
+                </tr>
+                <tr>
+                    <td>Product Quantity</td>
+                    <td><input type="text" name="pqty" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Add Product"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
